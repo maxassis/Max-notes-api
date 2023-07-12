@@ -1,4 +1,11 @@
-import { Body, Controller, Headers, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Headers,
+  Post,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
 import { AuthLoginDTO } from './dto/auth-login-dto';
 import { AuthRegisterDTO } from './dto/auth-register.dto';
 import { AuthResetDTO } from './dto/auth-reset-dto';
@@ -43,9 +50,10 @@ export class AuthController {
 
   @UseGuards(AuthGuard)
   @Post('me')
-  async me() {
+  async me(@Req() req) {
     return {
       ok: true,
+      data: await req.tokenPayLoad,
     };
   }
 }
