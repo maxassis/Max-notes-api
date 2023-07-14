@@ -11,3 +11,8 @@ Content-Type: application/json
 POST  http://localhost:3000/auth/me
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgzIiwiZW1haWwiOiJtYXhAdGVzdGUuY29tIiwiaWF0IjoxNjg5MTcxNzMwLCJleHAiOjE2ODkxNzUzMzAsImlzcyI6ImxvZ2luIn0.IgsbrJzGY5wG8tPaC60XIEWoZcbHAGgV0Gc7pt4Uif8
+
+
+
+
+

@@ -3,8 +3,10 @@ POST  http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name": "max4",
-    "email": "max@oi.com",
+    "name": "max7",
+    "email": "max@tim2.com",
     "password": " Testando1234"
 }
 ###
+
+GET http://localhost:3000/users
