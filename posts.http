@@ -3,8 +3,9 @@ POST http://localhost:3000/posts/create
 Content-Type: application/json
 
 {
-   "title" : "primeira postagem",
-   "content" : "hehehehehe!!!!"
+   "title" : "terceira postagem",
+   "content" : "33333",
+   "userId": 2
 }
 ###
 

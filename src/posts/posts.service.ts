@@ -7,13 +7,12 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class PostsService {
   constructor(private prisma: PrismaService) {}
 
-  create({ title, content }: CreatePostDto) {
-    console.log(title, content);
-
+  create({ title, content, userId }: CreatePostDto) {
     return this.prisma.post.create({
       data: {
-        title: 'title',
-        content: 'zzzzzzzzzzz',
+        title,
+        content,
+        userId,
       },
     });
   }

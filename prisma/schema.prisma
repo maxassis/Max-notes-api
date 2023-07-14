@@ -10,21 +10,23 @@ datasource db {
 model User {
   id        Int      @id @default(autoincrement()) @db.UnsignedInt
   name      String   @db.VarChar(63)
-  email     String   @db.VarChar(127) @unique
-  password  String   @db.VarChar(127) 
+  email     String   @unique @db.VarChar(127)
+  password  String   @db.VarChar(127)
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0)
+  Post      Post[]
 
   @@map("users")
 }
 
-
 model Post {
-  id   Int @id @default(autoincrement()) @db.UnsignedInt
-  title String?
-  content String?
+  id        Int      @id @default(autoincrement()) @db.UnsignedInt
+  title     String
+  content   String?
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0)
+  author    User     @relation(fields: [userId], references: [id])
+  userId    Int      @db.UnsignedInt
 
   @@map("posts")
 }
