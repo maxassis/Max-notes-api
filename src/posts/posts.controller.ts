@@ -20,23 +20,23 @@ export class PostsController {
     return this.postsService.create(body);
   }
 
-  // @Get()
-  // findAll() {
-  //   return this.postsService.findAll();
-  // }
+  @Get()
+  findAll() {
+    return this.postsService.findAll();
+  }
 
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   return this.postsService.findOne(+id);
-  // }
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.postsService.findOne(+id);
+  }
 
-  // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
-  //   return this.postsService.update(+id, updatePostDto);
-  // }
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() body: UpdatePostDto) {
+    return this.postsService.update(+id, body);
+  }
 
-  // @Delete(':id')
-  // remove(@Param('id') id: string) {
-  //   return this.postsService.remove(+id);
-  // }
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.postsService.remove(+id);
+  }
 }

@@ -5,8 +5,29 @@ Content-Type: application/json
 {
    "title" : "terceira postagem",
    "content" : "33333",
-   "userId": 2
 }
 ###
 
+// Pegando todas as postagens de um usuario
+GET http://localhost:3000/posts
+###
+
+//Pegando postagem especifica
+GET http://localhost:3000/posts/5
+###
+
+///Alterando post
+PATCH http://localhost:3000/posts/7
+Content-Type: application/json
+
+{
+   "title" : "postagem alterada22222",
+   "content" : "ALTERADOOOOOO22222!!!!"
+}
+###
+
+
+// deletando post
+DELETE http://localhost:3000/posts/5
+###
 

@@ -7,29 +7,54 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class PostsService {
   constructor(private prisma: PrismaService) {}
 
-  create({ title, content, userId }: CreatePostDto) {
+  create({ title, content }: CreatePostDto) {
     return this.prisma.post.create({
       data: {
         title,
         content,
-        userId,
+        userId: 3,
       },
     });
   }
 
-  // findAll() {
-  //   return `This action returns all posts`;
-  // }
+  findAll() {
+    return this.prisma.post.findMany({
+      where: {
+        userId: 1,
+      },
+    });
+  }
 
-  // findOne(id: number) {
-  //   return `This action returns a #${id} post`;
-  // }
+  findOne(id: number) {
+    return this.prisma.post.findUnique({
+      where: {
+        id,
+      },
+    });
+  }
 
-  // update(id: number, updatePostDto: UpdatePostDto) {
-  //   return `This action updates a #${id} post`;
-  // }
+  update(id: number, { title, content }: UpdatePostDto) {
 
-  // remove(id: number) {
-  //   return `This action removes a #${id} post`;
-  // }
+    return this.prisma.post.update({
+      where: {
+        id,
+      },
+      data: {
+        title,
+        content,
+      },
+    });
+
+    // return `This action updates a #${id} post`;
+  }
+
+  remove(id: number) {
+    return this.prisma.post.delete({
+      where: {
+        id,
+      },
+    });
+
+    //return `This action removes a #${id} post`;
+  }
 }
