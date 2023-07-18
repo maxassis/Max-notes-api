@@ -1,0 +1,15 @@
+// criar usuario
+POST  http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "max7",
+    "email": "max@tim9.com",
+    "password": " testando1234"
+}
+###
+
+GET http://localhost:3333/users
+###
+
+GET http://localhost:3333

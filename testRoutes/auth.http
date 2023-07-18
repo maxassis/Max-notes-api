@@ -1,10 +1,21 @@
-POST  http://localhost:3000/auth/login
+POST  http://localhost:3333/auth/login
 Content-Type: application/json
 
 {
-    "email": "max@oi.com",
-    "password": " Testando1234"
+    "email": "max@tim9.com",
+    "password": "testando1234"
 }
+###
+
+// Registrar novo usuario
+POST http://localhost:3333/auth/register
+Content-Type: application/json
+
+{
+    "name": "pedrinho",
+    "email": "max@tim11.com",
+    "password": "testando1234"
+}  
 ###
 
 // checar token
