@@ -25,6 +25,17 @@ export class PostsService {
     });
   }
 
+  search() {
+    return this.prisma.post.findMany({
+      where: {
+        userId: 1,
+        title: {
+          contains: 'primeira',
+        },
+      },
+    });
+  }
+
   findOne(id: number) {
     return this.prisma.post.findUnique({
       where: {
@@ -34,7 +45,6 @@ export class PostsService {
   }
 
   update(id: number, { title, content }: UpdatePostDto) {
-
     return this.prisma.post.update({
       where: {
         id,

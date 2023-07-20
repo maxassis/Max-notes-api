@@ -1,3 +1,4 @@
+//login do usuario
 POST  http://localhost:3333/auth/login
 Content-Type: application/json
 
@@ -19,10 +20,10 @@ Content-Type: application/json
 ###
 
 // checar token
-POST  http://localhost:3000/auth/me
+POST  http://localhost:3333/auth/me
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgzIiwiZW1haWwiOiJtYXhAdGVzdGUuY29tIiwiaWF0IjoxNjg5MTcxNzMwLCJleHAiOjE2ODkxNzUzMzAsImlzcyI6ImxvZ2luIn0.IgsbrJzGY5wG8tPaC60XIEWoZcbHAGgV0Gc7pt4Uif8
-
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lIjoibWF4NyIsImVtYWlsIjoibWF4QHRpbTkuY29tIiwiaWF0IjoxNjg5Nzg0MzIxLCJleHAiOjE2ODk3ODc5MjEsImlzcyI6ImxvZ2luIn0.P4IKSF5gytYH0CcsXIdDW1QZgS3ppkRAbfSVEXv4OJc
+###
 
 
 

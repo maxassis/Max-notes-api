@@ -9,7 +9,7 @@ Content-Type: application/json
 ###
 
 // Pegando todas as postagens de um usuario
-GET http://localhost:3000/posts
+GET http://localhost:3333/posts
 ###
 
 //Pegando postagem especifica

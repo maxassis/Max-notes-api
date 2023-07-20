@@ -32,7 +32,6 @@ export class AuthController {
   @Post('me')
   async me(@Req() req) {
     return {
-      ok: true,
       data: await req.tokenPayLoad,
     };
   }
