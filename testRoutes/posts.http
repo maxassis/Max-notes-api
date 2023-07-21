@@ -1,23 +1,26 @@
 //criando post
-POST http://localhost:3000/posts/create
+POST http://localhost:3333/posts/create
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lIjoibWF4NyIsImVtYWlsIjoibWF4QHRpbTkuY29tIiwiaWF0IjoxNjg5OTU3ODIyLCJleHAiOjE2OTA1NjI2MjIsImlzcyI6ImxvZ2luIn0.gN_S6Nw3RFeDI-w1A0HturG0nEv0ypwidsO6L4LYf_A
 
 {
-   "title" : "terceira postagem",
-   "content" : "33333",
+   "title" : "para funcionar2",
+   "content" : "green",
+   "color": "#9CD483"
 }
 ###
 
 // Pegando todas as postagens de um usuario
 GET http://localhost:3333/posts
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lIjoibWF4NyIsImVtYWlsIjoibWF4QHRpbTkuY29tIiwiaWF0IjoxNjg5OTU3ODIyLCJleHAiOjE2OTA1NjI2MjIsImlzcyI6ImxvZ2luIn0.gN_S6Nw3RFeDI-w1A0HturG0nEv0ypwidsO6L4LYf_A
 ###
 
 //Pegando postagem especifica
-GET http://localhost:3000/posts/5
+GET http://localhost:3333/posts/5
 ###
 
 ///Alterando post
-PATCH http://localhost:3000/posts/7
+PATCH http://localhost:3333/posts/7
 Content-Type: application/json
 
 {

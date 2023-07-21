@@ -7,21 +7,25 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class PostsService {
   constructor(private prisma: PrismaService) {}
 
-  create({ title, content }: CreatePostDto) {
+  create({ title, content, color }: CreatePostDto, id: number) {
     return this.prisma.post.create({
       data: {
         title,
         content,
-        userId: 3,
+        color,
+        userId: id,
       },
     });
   }
 
-  findAll() {
+  findAll(id: number) {
     return this.prisma.post.findMany({
       where: {
-        userId: 1,
+        userId: id,
       },
+      orderBy: {
+        updatedAt: 'desc',
+      }
     });
   }
 

@@ -22,7 +22,8 @@ model User {
 model Post {
   id        Int      @id @default(autoincrement()) @db.UnsignedInt
   title     String
-  content   String?
+  content   String?  @db.Text
+  color     String?  
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0)
   author    User     @relation(fields: [userId], references: [id])
