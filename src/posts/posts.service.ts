@@ -48,7 +48,7 @@ export class PostsService {
     });
   }
 
-  update(id: number, { title, content }: UpdatePostDto) {
+  update(id: number, { title, content, color }: UpdatePostDto) {
     return this.prisma.post.update({
       where: {
         id,
@@ -56,6 +56,7 @@ export class PostsService {
       data: {
         title,
         content,
+        color
       },
     });
 

@@ -20,17 +20,17 @@ GET http://localhost:3333/posts/5
 ###
 
 ///Alterando post
-PATCH http://localhost:3333/posts/7
+PATCH http://localhost:3333/posts/115
 Content-Type: application/json
 
 {
-   "title" : "postagem alterada22222",
-   "content" : "ALTERADOOOOOO22222!!!!"
+   "title" : "alterando",
+   "content" : "alterou"
 }
 ###
 
 
 // deletando post
-DELETE http://localhost:3000/posts/5
+DELETE http://localhost:3333/posts/3
 ###
 
