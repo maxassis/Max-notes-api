@@ -32,7 +32,7 @@ export class AuthController {
   @Post('me')
   async me(@Req() req) {
     const {sub} = await req.tokenPayLoad;
-    console.log(sub);
+    //console.log(sub);
     
     
 

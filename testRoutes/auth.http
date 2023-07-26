@@ -3,7 +3,7 @@ POST  http://localhost:3333/auth/login
 Content-Type: application/json
 
 {
-    "email": "max@tim9.com",
+    "email": "max@tim122.com",
     "password": "testando1234"
 }
 ###
@@ -14,7 +14,7 @@ Content-Type: application/json
 
 {
     "name": "pedrinho",
-    "email": "max@tim11.com",
+    "email": "max@tim13.com",
     "password": "testando1234"
 }  
 ###

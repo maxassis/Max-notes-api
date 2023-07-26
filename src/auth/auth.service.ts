@@ -70,8 +70,13 @@ export class AuthService {
   }
 
   async register(data: AuthRegisterDTO) {
-    const user = await this.userService.create(data);
 
-    return this.createToken(user);
+    try {
+      const user = await this.userService.create(data);
+      return this.createToken(user);
+    } catch (e) {
+      throw new BadRequestException('This email is already registered', { cause: new Error(), description: 'This email is already registered' })
+    }
+
   }
 }

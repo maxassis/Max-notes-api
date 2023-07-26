@@ -31,6 +31,6 @@ Content-Type: application/json
 
 
 // deletando post
-DELETE http://localhost:3333/posts/3
+DELETE http://localhost:3333/posts/126
 ###
 

@@ -32,7 +32,7 @@ export class PostsController {
   @Get()
   async findAll(@Req() req: ReqDTO) {
     const { sub } = await req.tokenPayLoad;
-    console.log(sub);
+  // console.log(sub);
     
    return this.postsService.findAll(sub);
   }
@@ -49,6 +49,7 @@ export class PostsController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
+   // console.log("delete")
     return this.postsService.remove(+id);
   }
 }
