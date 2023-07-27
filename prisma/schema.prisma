@@ -21,7 +21,7 @@ model User {
 
 model Post {
   id        Int      @id @default(autoincrement()) @db.UnsignedInt
-  title     String
+  title     String?
   content   String?  @db.Text
   color     String?  
   createdAt DateTime @default(now()) @db.Timestamp(0)
