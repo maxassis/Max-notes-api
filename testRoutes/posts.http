@@ -12,14 +12,25 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lI
 
 // Pegando todas as postagens de um usuario
 GET http://localhost:3333/posts
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lIjoibWF4NyIsImVtYWlsIjoibWF4QHRpbTkuY29tIiwiaWF0IjoxNjg5OTU3ODIyLCJleHAiOjE2OTA1NjI2MjIsImlzcyI6ImxvZ2luIn0.gN_S6Nw3RFeDI-w1A0HturG0nEv0ypwidsO6L4LYf_A
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
 ###
 
 //Pegando postagem especifica
-GET http://localhost:3333/posts/143
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lIjoibWF4NyIsImVtYWlsIjoibWF4QHRpbTkuY29tIiwiaWF0IjoxNjg5OTU3ODIyLCJleHAiOjE2OTA1NjI2MjIsImlzcyI6ImxvZ2luIn0.gN_S6Nw3RFeDI-w1A0HturG0nEv0ypwidsO6L4LYf_A
+GET http://localhost:3333/posts/508
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
+###
+
+//Buscando postagem por palavra
+POST  http://localhost:3333/posts/search
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
+Content-Type: application/json
+
+{
+   "content" : "teste123"
+}
 
 ###
+
 
 ///Alterando post
 PATCH http://localhost:3333/posts/115

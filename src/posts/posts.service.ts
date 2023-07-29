@@ -29,15 +29,25 @@ export class PostsService {
     });
   }
 
-  search() {
+  searchWord(id: number, content) {
+    
     return this.prisma.post.findMany({
       where: {
-        userId: 1,
-        title: {
-          contains: 'primeira',
-        },
+        userId: id,
+        OR: [
+          {
+            title: {
+              contains: 'teste',
+            },
+          },
+          {
+            content: {
+              contains: 'teste',
+            },
+          },
+        ],
       },
-    });
+    })
   }
 
   findOne(id: number) {

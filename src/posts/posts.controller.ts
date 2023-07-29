@@ -43,6 +43,16 @@ export class PostsController {
     return this.postsService.findOne(+id);
   }
 
+  @UseGuards(AuthGuard)
+  @Post('search')
+  async search(@Req() req: ReqDTO, @Body() body) {
+    const { content } = body
+    const { sub } = await req.tokenPayLoad;
+    console.log(content)
+    
+    return this.postsService.searchWord(sub, content);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: UpdatePostDto) {
     return this.postsService.update(+id, body);
