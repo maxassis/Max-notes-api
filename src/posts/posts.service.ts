@@ -37,12 +37,12 @@ export class PostsService {
         OR: [
           {
             title: {
-              contains: 'teste',
+              contains: content.trim(),
             },
           },
           {
             content: {
-              contains: 'teste',
+              contains: content.trim(),
             },
           },
         ],

@@ -26,7 +26,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lI
 Content-Type: application/json
 
 {
-   "content" : "teste123"
+   "content" : "teste"
 }
 
 ###
