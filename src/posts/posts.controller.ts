@@ -14,6 +14,7 @@ import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { ReqDTO } from 'src/guards/dto/req-dto';
+import { log } from 'console';
 
 @Controller('posts')
 export class PostsController {
@@ -44,13 +45,14 @@ export class PostsController {
   }
 
   @UseGuards(AuthGuard)
-  @Post('search')
-  async search(@Req() req: ReqDTO, @Body() body) {
-    const { content } = body
-    const { sub } = await req.tokenPayLoad;
-    console.log(content)
+  @Post(':id')
+  async search(@Req() req: ReqDTO, @Param('id') id: string) {
+    //console.log(id);
     
-    return this.postsService.searchWord(sub, content);
+    // const { content } = body
+    const { sub } = await req.tokenPayLoad;
+    
+    return this.postsService.searchWord(sub, id);
   }
 
   @Patch(':id')

@@ -29,7 +29,7 @@ export class PostsService {
     });
   }
 
-  searchWord(id: number, content) {
+  searchWord(id: number, word) {
     
     return this.prisma.post.findMany({
       where: {
@@ -37,16 +37,19 @@ export class PostsService {
         OR: [
           {
             title: {
-              contains: content.trim(),
+              contains: word.trim(),
             },
           },
           {
             content: {
-              contains: content.trim(),
+              contains: word.trim(),
             },
           },
         ],
       },
+      orderBy: {
+        updatedAt: 'desc',
+      }
     })
   }
 
