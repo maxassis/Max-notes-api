@@ -33,7 +33,6 @@ export class PostsController {
   @Get()
   async findAll(@Req() req: ReqDTO) {
     const { sub } = await req.tokenPayLoad;
-  // console.log(sub);
     
    return this.postsService.findAll(sub);
   }
@@ -47,9 +46,6 @@ export class PostsController {
   @UseGuards(AuthGuard)
   @Post(':id')
   async search(@Req() req: ReqDTO, @Param('id') id: string) {
-    //console.log(id);
-    
-    // const { content } = body
     const { sub } = await req.tokenPayLoad;
     
     return this.postsService.searchWord(sub, id);
@@ -58,6 +54,12 @@ export class PostsController {
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: UpdatePostDto) {
     return this.postsService.update(+id, body);
+  }
+
+  @UseGuards(AuthGuard)
+  @Patch('trash/:id')
+  moveToTrash(@Param('id') id: string) {
+    return this.postsService.moveToTrash(+id);
   }
 
   @Delete(':id')

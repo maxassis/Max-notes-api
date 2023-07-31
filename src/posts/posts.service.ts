@@ -7,13 +7,14 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class PostsService {
   constructor(private prisma: PrismaService) {}
 
-  create({ title, content, color }: CreatePostDto, id: number) {
+  create({ title, content, color, deleted }: CreatePostDto, id: number) {
     return this.prisma.post.create({
       data: {
         title,
         content,
         color,
         userId: id,
+        deleted
       },
     });
   }
@@ -22,6 +23,7 @@ export class PostsService {
     return this.prisma.post.findMany({
       where: {
         userId: id,
+        deleted: false
       },
       orderBy: {
         updatedAt: 'desc',
@@ -74,6 +76,17 @@ export class PostsService {
     });
 
     // return `This action updates a #${id} post`;
+  }
+
+  moveToTrash(id: number) {
+    return this.prisma.post.update({
+      where: {
+        id
+      },
+      data: {
+        deleted: true
+      }
+    })
   }
 
   remove(id: number) {

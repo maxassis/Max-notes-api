@@ -24,6 +24,7 @@ model Post {
   title     String?
   content   String?  @db.Text
   color     String?  
+  deleted   Boolean? @default(false)
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0)
   author    User     @relation(fields: [userId], references: [id])

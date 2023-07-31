@@ -1,12 +1,13 @@
 //criando post
 POST http://localhost:3333/posts/create
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lIjoibWF4NyIsImVtYWlsIjoibWF4QHRpbTkuY29tIiwiaWF0IjoxNjg5OTU3ODIyLCJleHAiOjE2OTA1NjI2MjIsImlzcyI6ImxvZ2luIn0.gN_S6Nw3RFeDI-w1A0HturG0nEv0ypwidsO6L4LYf_A
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODM3OTIwLCJleHAiOjE2OTE0NDI3MjAsImlzcyI6ImxvZ2luIn0.Uk6Ui7wU3W5DQoyzBYmPt4SUO0hvM2cyGzNN2H9-r8M
 
 {
    "title" : "para funcionar2",
    "content" : "green",
-   "color": "#9CD483"
+   "color": "#9CD483",
+   "deleted": true
 }
 ###
 
@@ -25,10 +26,6 @@ POST  http://localhost:3333/posts/testando
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
 Content-Type: application/json
 
-# {
-#    "content" : "teste"
-# }
-
 ###
 
 
@@ -40,6 +37,10 @@ Content-Type: application/json
    "title" : "alterando",
    "content" : "alterou"
 }
+###
+
+//Movendo para a lixeira 
+PATCH http://localhost:3333/posts/trash/815
 ###
 
 

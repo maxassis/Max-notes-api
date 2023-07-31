@@ -1,4 +1,4 @@
-import { IsNumber, IsString } from 'class-validator';
+import { IsBoolean, IsString } from 'class-validator';
 
 export class CreatePostDto {
   @IsString()
@@ -9,4 +9,7 @@ export class CreatePostDto {
 
   @IsString()
   color: string
+
+  @IsBoolean()
+  deleted: boolean
 }
