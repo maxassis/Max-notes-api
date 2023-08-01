@@ -62,9 +62,19 @@ export class PostsController {
     return this.postsService.moveToTrash(+id);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-   // console.log("delete")
-    return this.postsService.remove(+id);
+  @UseGuards(AuthGuard)
+  @Get('trash/:id')
+  async getTrash(@Param('id') id: string) {
+   return this.postsService.getTrash(+id)
+  }
+
+  @UseGuards(AuthGuard)
+  @Post('clean/:id')
+  async removeAll(@Param('id') id: string) {
+    console.log(id);
+    
+    
+   // return {teste: id}
+  return this.postsService.cleanTrash(+id);
   }
 }

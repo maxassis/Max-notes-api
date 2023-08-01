@@ -36,6 +36,7 @@ export class PostsService {
     return this.prisma.post.findMany({
       where: {
         userId: id,
+        deleted: false,
         OR: [
           {
             title: {
@@ -56,9 +57,10 @@ export class PostsService {
   }
 
   findOne(id: number) {
-    return this.prisma.post.findUnique({
+    return this.prisma.post.findFirstOrThrow({
       where: {
         id,
+        deleted: false
       },
     });
   }
@@ -89,10 +91,24 @@ export class PostsService {
     })
   }
 
-  remove(id: number) {
-    return this.prisma.post.delete({
+  getTrash(id: number) {
+    return this.prisma.post.findMany({
       where: {
-        id,
+        userId: id,
+        deleted: true
+      },
+      orderBy: {
+        updatedAt: 'desc',
+      }
+    })
+  }
+
+
+  cleanTrash(id: number) {
+    return this.prisma.post.deleteMany({
+      where: {
+        userId: id,
+        deleted: true,
       },
     });
 

@@ -13,16 +13,16 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lI
 
 // Pegando todas as postagens de um usuario
 GET http://localhost:3333/posts
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODk4NjUwLCJleHAiOjE2OTE1MDM0NTAsImlzcyI6ImxvZ2luIn0.cjdOhnYNZb93_w15JdLuWRin5cBVZKSLNk2su9wPSMs
 ###
 
 //Pegando postagem especifica
-GET http://localhost:3333/posts/508
+GET http://localhost:3333/posts/830
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
 ###
 
 //Buscando postagem por palavra
-POST  http://localhost:3333/posts/testando   
+POST  http://localhost:3333/posts/teste  
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
 Content-Type: application/json
 
@@ -40,11 +40,19 @@ Content-Type: application/json
 ###
 
 //Movendo para a lixeira 
-PATCH http://localhost:3333/posts/trash/815
+PATCH http://localhost:3333/posts/trash/828
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
 ###
 
+// Pegando todas as postagens da lixeira
+GET http://localhost:3333/posts/trash/17
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODk4NjUwLCJleHAiOjE2OTE1MDM0NTAsImlzcyI6ImxvZ2luIn0.cjdOhnYNZb93_w15JdLuWRin5cBVZKSLNk2su9wPSMs
+###
 
-// deletando post
-DELETE http://localhost:3333/posts/210
+// limpando a lixeira
+POST http://localhost:3333/posts/clean/17
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODk4NjUwLCJleHAiOjE2OTE1MDM0NTAsImlzcyI6ImxvZ2luIn0.cjdOhnYNZb93_w15JdLuWRin5cBVZKSLNk2su9wPSMs
+Content-Type: application/json
+
 ###
 
