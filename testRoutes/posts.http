@@ -22,7 +22,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lI
 ###
 
 //Buscando postagem por palavra
-POST  http://localhost:3333/posts/teste  
+POST  http://localhost:3333/posts/teste 
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
 Content-Type: application/json
 
