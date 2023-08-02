@@ -73,8 +73,15 @@ export class PostsController {
   async removeAll(@Param('id') id: string) {
     console.log(id);
     
-    
-   // return {teste: id}
   return this.postsService.cleanTrash(+id);
   }
+
+  @UseGuards(AuthGuard)
+  @Patch('restore/:id')
+  restore(@Param('id') id: string) {
+    return this.postsService.restore(+id);
+  }
+
+
+
 }

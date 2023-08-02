@@ -114,4 +114,18 @@ export class PostsService {
 
     //return `This action removes a #${id} post`;
   }
+
+  restore(id: number) {
+    return this.prisma.post.update({
+      where: {
+        id,
+      },
+      data: {
+        deleted: false
+      },
+    })
+  }
 }
+
+
+

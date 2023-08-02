@@ -56,3 +56,8 @@ Content-Type: application/json
 
 ###
 
+// restaurando nota da lixeira
+PATCH http://localhost:3333/posts/restore/872
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODk4NjUwLCJleHAiOjE2OTE1MDM0NTAsImlzcyI6ImxvZ2luIn0.cjdOhnYNZb93_w15JdLuWRin5cBVZKSLNk2su9wPSMs
+
+###
