@@ -31,13 +31,12 @@ export class AuthController {
   @UseGuards(AuthGuard)
   @Post('me')
   async me(@Req() req) {
-    const {sub} = await req.tokenPayLoad;
-    //console.log(sub);
+    const {name, email} = await req.tokenPayLoad;
+    // console.log(name, email);
     
-    
-
     return {
-      data: await req.tokenPayLoad,
+      name,
+      email
     };
   }
 }

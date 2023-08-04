@@ -22,7 +22,7 @@ Content-Type: application/json
 // checar token
 POST  http://localhost:3333/auth/me
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lIjoibWF4NyIsImVtYWlsIjoibWF4QHRpbTkuY29tIiwiaWF0IjoxNjg5OTU3ODIyLCJleHAiOjE2OTA1NjI2MjIsImlzcyI6ImxvZ2luIn0.gN_S6Nw3RFeDI-w1A0HturG0nEv0ypwidsO6L4LYf_A
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkxMTc5MjExLCJleHAiOjE2OTE3ODQwMTEsImlzcyI6ImxvZ2luIn0.5TZykZFkp5JeLr7REopXsAaWGU5ruv-yA6zjHsauaEg
 ###
 
 
