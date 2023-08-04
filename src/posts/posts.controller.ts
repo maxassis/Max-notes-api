@@ -74,7 +74,7 @@ export class PostsController {
   @UseGuards(AuthGuard)
   @Post('clean/:id')
   async removeAll(@Param('id') id: string) {
-    console.log(id);
+   // console.log(id);
     
   return this.postsService.cleanTrash(+id);
   }

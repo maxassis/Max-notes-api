@@ -1,13 +1,13 @@
 //criando post
 POST http://localhost:3333/posts/create
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODM3OTIwLCJleHAiOjE2OTE0NDI3MjAsImlzcyI6ImxvZ2luIn0.Uk6Ui7wU3W5DQoyzBYmPt4SUO0hvM2cyGzNN2H9-r8M
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgiLCJlbWFpbCI6Im1heEB0ZXN0ZS5jb20iLCJpYXQiOjE2OTExODUzMzksImV4cCI6MTY5MTc5MDEzOSwiaXNzIjoibG9naW4ifQ.OGNb9ssl_GyNtluJhXaBtLPqgJfysPO9tT1STG_6WHw
 
 {
-   "title" : "para funcionar2",
-   "content" : "green",
-   "color": "#9CD483",
-   "deleted": true
+   "title" : "primeiro post com postgres",
+   "content" : "postgres",
+   "color": "#fff",
+   "deleted": false
 }
 ###
 
@@ -45,8 +45,8 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lI
 ###
 
 // Pegando todas as postagens da lixeira
-GET http://localhost:3333/posts/trash/17
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODk4NjUwLCJleHAiOjE2OTE1MDM0NTAsImlzcyI6ImxvZ2luIn0.cjdOhnYNZb93_w15JdLuWRin5cBVZKSLNk2su9wPSMs
+GET http://localhost:3333/posts/trash/1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgiLCJlbWFpbCI6Im1heEB0ZXN0ZS5jb20iLCJpYXQiOjE2OTExODUzMzksImV4cCI6MTY5MTc5MDEzOSwiaXNzIjoibG9naW4ifQ.OGNb9ssl_GyNtluJhXaBtLPqgJfysPO9tT1STG_6WHw
 ###
 
 // limpando a lixeira

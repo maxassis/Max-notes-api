@@ -3,8 +3,8 @@ POST  http://localhost:3333/auth/login
 Content-Type: application/json
 
 {
-    "email": "max@tim12.com",
-    "password": "testando1234"
+    "email": "max@teste.com",
+    "password": "123456"
 }
 ###
 
@@ -13,9 +13,9 @@ POST http://localhost:3333/auth/register
 Content-Type: application/json
 
 {
-    "name": "pedrinho",
-    "email": "max@tim13.com",
-    "password": "testando1234"
+    "name": "max",
+    "email": "max@teste.com",
+    "password": "123456"
 }  
 ###
 
