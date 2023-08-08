@@ -1,10 +1,11 @@
 //criando post
-POST http://localhost:3333/posts/create
+//POST http://localhost:3333/posts/create
+POST https://max-notes-api.onrender.com/posts/create
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgiLCJlbWFpbCI6Im1heEB0ZXN0ZS5jb20iLCJpYXQiOjE2OTExODUzMzksImV4cCI6MTY5MTc5MDEzOSwiaXNzIjoibG9naW4ifQ.OGNb9ssl_GyNtluJhXaBtLPqgJfysPO9tT1STG_6WHw
 
 {
-   "title" : "primeiro post com postgres",
+   "title" : "primeiro post no render",
    "content" : "postgres",
    "color": "#fff",
    "deleted": false
@@ -13,7 +14,8 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiO
 
 // Pegando todas as postagens de um usuario
 GET http://localhost:3333/posts
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwODk4NjUwLCJleHAiOjE2OTE1MDM0NTAsImlzcyI6ImxvZ2luIn0.cjdOhnYNZb93_w15JdLuWRin5cBVZKSLNk2su9wPSMs
+//GET https://max-notes-api.onrender.com/posts
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgiLCJlbWFpbCI6Im1heEB0ZXN0ZS5jb20iLCJpYXQiOjE2OTEyNjk1MDUsImV4cCI6MTY5MTg3NDMwNSwiaXNzIjoibG9naW4ifQ.bKIYaHnM8jEIMAZgThU4VcVwdmt_1iShgESz3AGg-Gg
 ###
 
 //Pegando postagem especifica
@@ -22,8 +24,9 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lI
 ###
 
 //Buscando postagem por palavra
-POST  http://localhost:3333/posts/teste 
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkwNjM4MzIwLCJleHAiOjE2OTEyNDMxMjAsImlzcyI6ImxvZ2luIn0.YEXbrIhYhget1AYAPI7LMvxi6H5ma7I-lAyzSvRU_0w
+POST  http://localhost:3333/posts/HEHE 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgiLCJlbWFpbCI6Im1heEB0ZXN0ZS5jb20iLCJpYXQiOjE2OTEyNjk1MDUsImV4cCI6MTY5MTg3NDMwNSwiaXNzIjoibG9naW4ifQ.bKIYaHnM8jEIMAZgThU4VcVwdmt_1iShgESz3AGg-Gg
+###
 Content-Type: application/json
 
 ###

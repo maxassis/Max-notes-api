@@ -1,5 +1,6 @@
 //login do usuario
-POST  http://localhost:3333/auth/login
+//POST  http://localhost:3333/auth/login
+POST https://max-notes-api.onrender.com/auth/login
 Content-Type: application/json
 
 {
@@ -10,19 +11,21 @@ Content-Type: application/json
 
 // Registrar novo usuario
 POST http://localhost:3333/auth/register
+//POST https://max-notes-api.onrender.com/auth/register
 Content-Type: application/json
 
 {
-    "name": "max",
-    "email": "max@teste.com",
+    "name": "Max",
+    "email": "Max@teste.com",
     "password": "123456"
 }  
 ###
 
 // checar token
-POST  http://localhost:3333/auth/me
+// POST  http://localhost:3333/auth/me
+POST https://max-notes-api.onrender.com/auth/me
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJuYW1lIjoibWF4IiwiZW1haWwiOiJtYXhAdGltMTIuY29tIiwiaWF0IjoxNjkxMTc5MjExLCJleHAiOjE2OTE3ODQwMTEsImlzcyI6ImxvZ2luIn0.5TZykZFkp5JeLr7REopXsAaWGU5ruv-yA6zjHsauaEg
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtYXgiLCJlbWFpbCI6Im1heEB0ZXN0ZS5jb20iLCJpYXQiOjE2OTEyNjk1MDUsImV4cCI6MTY5MTg3NDMwNSwiaXNzIjoibG9naW4ifQ.bKIYaHnM8jEIMAZgThU4VcVwdmt_1iShgESz3AGg-Gg
 ###
 
 

@@ -41,18 +41,20 @@ export class PostsService {
           {
             title: {
               contains: word.trim(),
+              mode: 'insensitive',
             },
           },
           {
             content: {
               contains: word.trim(),
+              mode: 'insensitive',
             },
           },
         ],
       },
       orderBy: {
         updatedAt: 'desc',
-      }
+      },
     })
   }
 
