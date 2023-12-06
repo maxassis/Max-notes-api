@@ -34,6 +34,6 @@ npx prisma migrate dev
 ```
 por fim execute o localhost com:
 ```
-npm run dev
+npm run start
 ```
 
